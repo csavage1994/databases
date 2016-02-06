@@ -9,3 +9,20 @@ for (var route in controllers) {
 
 module.exports = router;
 
+
+/*  
+
+router.messages('/messages').get(controllers.messages.get).post(controllers.messages.post)
+                            .get(function(req, res){})
+
+var app = express();
+
+app.get('/', function(req, res){
+  
+})
+
+
+
+
+*/
+
