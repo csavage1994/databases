@@ -53,7 +53,7 @@ $(function() {
 
       // POST the message to the server
       $.ajax({
-        url: clientApp.server,
+        url: clientApp.server + '/messages',
         type: 'POST',
         data: JSON.stringify(data),
         contentType: 'application/json',
@@ -69,14 +69,13 @@ $(function() {
     },
     fetch: function(animate) {
       $.ajax({
-        url: clientApp.server,
+        url: clientApp.server + '/messages',
         type: 'GET',
         contentType: 'application/json',
         data: {},
         success: function(data) {
           console.log('chatterbox: Messages fetched');
           data = JSON.parse(data);
-          console.log(data.results);
           // Don't bother if we have nothing to work with
           if (!data.results || !data.results.length) { return; }
 
